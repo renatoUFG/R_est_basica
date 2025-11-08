@@ -1,19 +1,16 @@
-# PsycProp  um aplicativo shiny para análise  de propriedades psicométricas de escalas tipo Likert
-
-Este aplicativo Shiny facilita a análise de propriedades psicométricas de instrumentos baseados em escalas tipo Likert. 
-Desenvolvido por **Renato Rodrigues Silva**, utiliza diversas bibliotecas da linguagem R, incluindo `psych`, `lavaan`, `mirt`, entre outras.
+# R_est_basica um aplicativo shiny para análise estatísticas básicas
+Este aplicativo Shiny facilita a análise  estatísticas básicas
+Desenvolvido por **Renato Rodrigues Silva**, utiliza diversas bibliotecas da linguagem R, incluindo `broom`, `tidyverse`  entre outras.
 
 ##  Pacotes necessários
 
 - shiny
-- shinyWidgets)
-- shinythemes)
+- shinyWidgets
+- shinythemes
 - tidyverse
 - DT
-- psych
-- lavaan
-- EFA.MRFA
-- mirt
+- broom
+
 
 
 ##  Instalação
@@ -28,27 +25,18 @@ source("install_dependencies.R")
 
 Apenas arquivos com extensão .csv ou .xls, ou xlsx são aceitos no app
 
-## Preparação da planilha
-
-A planilha deve ser organizada da seguinte forma:
-Cada coluna é um item da escala e cada linha é uma resposta dos participantes.
-Os nomes das colunas deve ser consistente com a forma de nomear
-variáveis no R.
-A planilha deve conter apenas os itens da escala, qualquer outras variáveis
-coletadas durante a pesquisa (variáveis demográficas por exemplo) devem
-ser removidas.
 
 
 ##  Como executar
 
 ### Usando a IDE RStudio
 
-Abra o arquivo `PsychProp.R` no RStudio e clique em **Run App**.
+Abra o arquivo `app.R` no RStudio e clique em **Run App**.
 
 ### Usando o terminal do Windows
 
 1. Abra o Prompt de Comando (cmd.exe) ou PowerShell.
-2. Navegue até a pasta onde está PsychProp.R
+2. Navegue até a pasta onde está app.R
 3. Execute: Rscript app.R
 
 Obs: Se ao rodar Rscript você receber erro do tipo “comando não encontrado”, verifique se o R está no seu PATH do sistema.:
@@ -57,7 +45,7 @@ Obs: Se ao rodar Rscript você receber erro do tipo “comando não encontrado�
 
 1. Abra o terminal.
 2. Vá até a pasta 
-3. Execute:  Rscript PsychProp.R
+3. Execute:  Rscript app.R
 
 ### Usando arquivo executável no Windows
 
@@ -73,11 +61,10 @@ chmod +x rodar_app.sh
 b. Nas outras vezes, execute:
 ./rodar_app.sh
 
-##Utilização de PsychProp
+##Utilização de R_est_basica
 
 A maioria das análises é intuitiva, basta clicar nos botões indicados. 
-Para fazer análise fatorial confirmatória, a sintaxe é a mesma utilizada no software lavaan,
-cujo maiores detalhes podem ser encontrados no endereço https://lavaan.ugent.be/tutorial/cfa.html
+Para fazer análise de regressão, a sintaxe é a mesma utilizada na função lm do software R,
 
 
 ##  Licença
