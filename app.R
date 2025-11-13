@@ -454,7 +454,7 @@ server <- function(input, output, session) {
                             alternative = input$hipotese_alternativa))
     } else if (input$testes2 == "pop_dependentes") {
         # Teste t para amostras dependentes
-        resultado <- broom::tidy(t.test(var1 ~ var2, 
+        resultado <- broom::tidy(t.test(var1, var2, 
                              paired = TRUE,
                              alternative = input$hipotese_alternativa))
     } else {
