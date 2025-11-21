@@ -121,7 +121,7 @@ ui <- navbarPage(
              sidebarLayout(
                sidebarPanel(
                  textAreaInput("modelo_lm", "Modelo Regressão", 
-                               placeholder = "Ex: y =~ x1 + x2 + x3", rows = 15),
+                               placeholder = "Ex: y ~ x1 + x2 + x3", rows = 15),
                  actionButton("rodar_lm", "Rodar Análise de Regressão")
                ),
                mainPanel(
@@ -487,7 +487,7 @@ server <- function(input, output, session) {
       fit <- lm(formula = model_lm, data = dados_limpos)
       listres = list()
       listres[[1]]= broom::tidy(summary(fit))
-      listres[[2]] = anova(fit)
+      listres[[2]] = summary(fit)
       return(listres)
     })
   })
